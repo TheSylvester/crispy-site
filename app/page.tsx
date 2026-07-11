@@ -2,105 +2,40 @@
 
 import Image from "next/image";
 import DotGridBackground from "@/components/dot-grid-background";
-import { FlipBanner } from "@/components/flip-banner";
-
-const NAV_ITEMS = ["About", "Projects", "Contact"];
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-[#1C1917]">
       <DotGridBackground />
 
-      {/* Nav */}
+      {/* Header */}
       <nav className="relative z-10 flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <span className="text-xl font-bold tracking-tight text-[#D4A574]">
-          SW<span className="text-[#F97316]">.</span>
+          Crispy<span className="text-[#F97316]">.</span>
         </span>
-        <div className="hidden md:flex items-center gap-8 text-sm text-stone-500">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="hover:text-stone-200 transition-colors duration-200"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-      </nav>
-
-      {/* Hero */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-88px)] px-6">
-        {/* Profile image with circle */}
-        <div className="relative mb-4 group" style={{ width: 300, height: 400 }}>
-          {/* Glow */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-72 h-72 z-[1] pointer-events-none">
-            <div className="absolute -inset-4 rounded-full bg-gradient-to-t from-[#F97316]/15 via-[#D4A574]/20 to-transparent blur-xl" />
-          </div>
-
-          {/* Circle ring — behind image (temporarily hidden) */}
-          {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full border-2 border-[#D4A574]/30 z-[5] pointer-events-none" /> */}
-
-          {/* Image with gradient fade at bottom */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-[52%] w-[560px] z-10 pointer-events-none" style={{ maskImage: "linear-gradient(to bottom, black 60%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 90%)" }}>
-            <Image
-              src="/images/sylvester-suit-800w-bw-clean.png"
-              alt="Sylvester Wong"
-              width={800}
-              height={800}
-              className="w-full h-auto"
-              style={{ filter: "sepia(0.3) brightness(0.85) hue-rotate(5deg) saturate(0.7)" }}
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Name + Tagline group */}
-        <div className="flex flex-col items-center gap-0 mb-8">
-          <h1 className="font-[family-name:var(--font-bebas)] text-6xl md:text-8xl tracking-wide bg-gradient-to-r from-[#D4A574] to-[#F97316] bg-clip-text text-transparent" style={{ lineHeight: "89%" }}>
-            SYLVESTER WONG
-          </h1>
-          <div className="text-center max-w-xl h-10 md:h-12 flex items-center justify-center">
-            <FlipBanner
-              phrases={[
-                "Agentic AI Leader",
-                "Agentic Harness Engineer",
-                "Full Stack Developer",
-                "AI Solutions Architect",
-              ]}
-            />
-          </div>
-        </div>
-
-        {/* Subtitle */}
-        <p className="text-stone-500 text-sm md:text-base mb-10 tracking-wide">
-          Supercharging dev teams with autonomous coding tools
-        </p>
-
-        {/* CTA buttons */}
-        <div className="flex gap-4">
+        <div className="flex items-center gap-8 text-sm text-stone-500">
           <a
-            href="#projects"
-            className="group relative px-7 py-3 rounded-full bg-gradient-to-r from-[#D4A574] to-[#F97316] text-[#1C1917] font-semibold text-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_24px_rgba(249,115,22,0.3)]"
-          >
-            View Projects
-          </a>
-          <a
-            href="/Sylvester_Wong_Resume.pdf"
+            href="https://github.com/TheSylvester/crispy"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-7 py-3 rounded-full border border-[#D4A574]/30 text-[#D4A574] text-sm font-medium hover:bg-[#D4A574]/10 hover:border-[#D4A574]/50 transition-all duration-300"
+            className="hover:text-stone-200 transition-colors duration-200"
           >
-            View Resume
+            GitHub
           </a>
           <a
             href="#contact"
-            className="px-7 py-3 rounded-full border border-stone-700 text-stone-400 text-sm font-medium hover:border-stone-500 hover:text-stone-200 transition-all duration-300"
+            className="hover:text-stone-200 transition-colors duration-200"
           >
-            Get in Touch
+            Contact
+          </a>
+          <a
+            href="https://thesylvester.ca"
+            className="hover:text-stone-200 transition-colors duration-200"
+          >
+            thesylvester.ca
           </a>
         </div>
-      </main>
+      </nav>
 
       {/* Crispy Section */}
       <section id="projects" className="relative z-10 py-32 px-6">
@@ -108,7 +43,7 @@ export default function Home() {
           {/* Section header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D4A574]/20 bg-[#D4A574]/5 text-[#D4A574] text-xs font-medium tracking-wide uppercase mb-6">
-              Featured Project
+              Archived Project
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
               <a
@@ -244,7 +179,14 @@ export default function Home() {
             Get in Touch
           </h2>
           <p className="text-stone-400 mb-10 leading-relaxed">
-            Open to opportunities. Remote preferred.
+            Questions about Crispy? Reach out — or meet the person behind it at{" "}
+            <a
+              href="https://thesylvester.ca"
+              className="text-[#D4A574] hover:text-[#E8C4A0] transition-colors"
+            >
+              thesylvester.ca
+            </a>
+            .
           </p>
           <button
             onClick={() => {
