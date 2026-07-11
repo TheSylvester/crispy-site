@@ -17,8 +17,8 @@ export default function Home() {
           <span className="mx-2 text-stone-600">·</span>
           Crispy hasn&apos;t been maintained since June 2026. A Claude Code
           pricing change — later walked back — was enough to show how fragile it
-          is to build on a platform whose economics can change overnight. Its
-          cross-session memory lives on as{" "}
+          is to build on a platform whose economics can change overnight. But
+          good news!{" "}
           <a
             href="https://github.com/TheSylvester/crispy-recall"
             target="_blank"
@@ -26,8 +26,9 @@ export default function Home() {
             className="text-[#D4A574] underline underline-offset-2 hover:text-[#E8C4A0] transition-colors"
           >
             Recall
-          </a>
-          .
+          </a>{" "}
+          now lives on as a Claude Code plugin, providing cross-session memory
+          for all.
         </p>
       </div>
 
