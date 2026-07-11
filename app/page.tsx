@@ -17,8 +17,10 @@ export default function Home() {
           <span className="mx-2 text-stone-600">·</span>
           Crispy hasn&apos;t been maintained since June 2026. A Claude Code
           pricing change — later walked back — was enough to show how fragile it
-          is to build on a platform whose economics can change overnight. But
-          good news!{" "}
+          is to build on a platform whose economics can change overnight.
+        </p>
+        <p className="mt-1 text-xs leading-relaxed text-stone-400">
+          But good news!{" "}
           <a
             href="https://github.com/TheSylvester/crispy-recall"
             target="_blank"
