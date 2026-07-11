@@ -8,6 +8,28 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#1C1917]">
       <DotGridBackground />
 
+      {/* Archive notice */}
+      <div className="relative z-10 border-b border-[#D4A574]/15 bg-[#D4A574]/[0.06] px-4 py-2 text-center">
+        <p className="text-xs leading-relaxed text-stone-400">
+          <span className="font-semibold uppercase tracking-wider text-[#D4A574]">
+            Archived
+          </span>
+          <span className="mx-2 text-stone-600">·</span>
+          Crispy is no longer maintained as of June 2026, after Claude Code&apos;s
+          pricing change removed the flat-subscription advantage it was built
+          around. Its cross-session memory lives on as{" "}
+          <a
+            href="https://github.com/TheSylvester/crispy-recall"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D4A574] underline underline-offset-2 hover:text-[#E8C4A0] transition-colors"
+          >
+            Recall
+          </a>
+          .
+        </p>
+      </div>
+
       {/* Header */}
       <nav className="relative z-10 flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <span className="text-xl font-bold tracking-tight text-[#D4A574]">
