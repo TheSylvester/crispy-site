@@ -15,9 +15,10 @@ export default function Home() {
             Archived
           </span>
           <span className="mx-2 text-stone-600">·</span>
-          Crispy is no longer maintained as of June 2026, after Claude Code&apos;s
-          pricing change removed the flat-subscription advantage it was built
-          around. Its cross-session memory lives on as{" "}
+          Crispy hasn&apos;t been maintained since June 2026. A Claude Code
+          pricing change — later walked back — was enough to show how fragile it
+          is to build on a platform whose economics can change overnight. Its
+          cross-session memory lives on as{" "}
           <a
             href="https://github.com/TheSylvester/crispy-recall"
             target="_blank"
